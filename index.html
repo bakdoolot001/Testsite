@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	.card-img-top{
+	width: 100%;
+	height: 200px;
+}
+.home{
+	margin-top: 50px;
+}
+
+/* Name site */
+
+h1{
+	margin-left: 100px;
+}
+
+/* Center */
+
+#container{
+	margin-left: 0;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
+#container-2{
+	margin-left: 0;
+	margin-bottom: 10px;
+	margin-left: 100px;
+
+}
+
+/* Input search */
+
+.form-inline{
+	margin-left: 300px;
+}
+/* Logotip */
+.logo{
+	margin-left: 120px;
+}
+
+#header{
+	margin-top: 20px;
+}
+
+/* Menu */
+
+.r-link{
+  display: var(--rLinkDisplay, inline-flex) !important;
+}
+
+.r-link[href]{
+  color: var(--rLinkColor) !important;
+  text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+
+.r-list{
+  padding-left: var(--rListPaddingLeft, 0) !important;
+  margin-top: var(--rListMarginTop, 0) !important;
+  margin-bottom: var(--rListMarginBottom, 0) !important;
+  list-style: var(--rListListStyle, none) !important;
+}
+
+
+/*
+=====
+CORE STYLES
+=====
+*/
+
+.menu{
+  --rLinkColor: var(--menuLinkColor, currentColor);
+}
+
+.menu__link{
+  display: var(--menuLinkDisplay, block);
+}
+
+/* 
+focus state 
+*/
+
+.menu__link:focus{
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+
+/* 
+fading siblings
+*/
+
+.menu:hover .menu__link:not(:hover){
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+/*
+=====
+PRESENTATION STYLES
+=====
+*/
+
+.menu{
+  background-color: var(--menuBackgroundColor, #f0f0f0);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+
+.menu__list{
+  display: flex;  
+}
+
+.menu__link{
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 
+=====
+TEXT UNDERLINED
+=====
+*/
+
+.text-underlined{
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;  
+}
+
+.text-underlined::before, 
+.text-underlined::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.text-underlined::before{
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.text-underlined::after{
+  right: 50%;
+  transform: translateX(50%); 
+}
+
+.text-underlined:hover::before, 
+.text-underlined:hover::after{
+  width: 100%;
+  transition-duration: .2s;
+}
+
+/*
+=====
+SETTINGS
+=====
+*/
+
+.page__custom-settings{
+  --menuBackgroundColor: #6c5ce7;
+  --menuLinkColor: #fff;
+  --menuLinkColorUnactive: #241c69;
+  --menuLinkOutlineOffset: -.5rem; 
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;  
+  flex-direction: column;
+}
+
+.page{
+  box-sizing: border-box;
+  max-width: 640px;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin: auto;
+}
+
+/* Icons */
+
+.icons{
+	margin-left: 50px;
+	font-size: 20px;
+}
+.fa-instagram{
+	color: red;
+}
+.fa-facebook{
+	color: blue;
+}
+.fa-telegram{
+	color: blue;
+}
+.fa-whatsapp{
+	color:  #01fa1f;
+}
+
+/*bishkek css*/
+
+.bishkek-text{
+	margin-top: 20px;
+}
+.bishkek-img{
+	margin-top: 30px;
+}
+
+</style>
+<body>
+	<header>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static 'main/img/logo_burkut.png' %}" width="100" height="70" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="icons">
+            <a href="http://instagram.com/share.php?url=file:///home/bakdoolot/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/OUR%20SITE/bishkek.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://facebook.com/share.php?u=file:///home/bakdoolot/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/OUR%20SITE/bishkek.html"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://telegram.me/share/url?url=file:///home/bakdoolot/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/OUR%20SITE/bishkek.html"><i class="fa-brands fa-telegram"></i></a>
+            <a href="http://whatsapp.com/share.php?url=file:///home/bakdoolot/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/OUR%20SITE/bishkek.html"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+            <nav class="navbar navbar-light bg-light">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search"  aria-label="Search" style="width: 300px;">
+                  <a href="#" type="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+              </form>
+            </nav>
+          <div class="langWarp" style="margin-left: 100px;">
+                <a href="#" language="english">EN</a>
+                <a href="#" language="russia">RU</a>
+                <a href="#" language="kyrgyz">KG</a>
+          </div>
+        </nav>
+    </div>
+    <!-- Menu -->
+
+    <nav class="page__menu menu">
+        <ul class="menu__list r-list" style="margin-left: 100px;">
+          <li class="menu__group"><a href="{% url 'home' %}" class="menu__link r-link text-underlined">Башкы-Бет</a></li>
+          <li class="menu__group"><a href="{% url 'kitepter' %}" class="menu__link r-link text-underlined">Китептер</a></li>
+          <li class="menu__group"><a href="{% url 'belgiluu-insandar' %}" class="menu__link r-link text-underlined">Белгилүү инсандар</a></li>
+          <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Биз жөнүндө</a></li>
+        </ul>
+    </nav>
+
+<!-- Menu -->
+</header>
+<!-- Center -->
+	<div class="container" id="container">
+		<div class="card-deck">
+		  <div class="card col-md-12">
+			<a href="{% url 'bishkek' %}"><img class="card-img-top" src="http://zarubezhexpo.ru/info_bishkek/files/file0011.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Бишкек</h5>
+			  <p class="card-text">Бишкек шаары...</p>
+			</div>
+		  </div>
+		  <div class="card card col-sm-12">
+			<a href="{% url 'batken' %}"><img class="card-img-top" src="https://sputnik.kg/img/104654/35/1046543501_0:18:3069:1744_1920x0_80_0_0_ce38e5d48cd768898c78058de61c7add.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Баткен</h5>
+			  <p class="card-text">Баткен облусу...</p>
+			</div>
+		  </div>
+		  <div class="card card col-sm-12">
+			<a href="{% url 'jalal_abad' %}"><img class="card-img-top" src="http://st-1.akipress.org/127/.storage/limon/images/2014leto/4b209ef1da1490cc5b5fe2abeb3318e4.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Жалал-Абад</h5>
+			  <p class="card-text">Жалал-Абад облусу...</p>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<div class="container" id="container-2">
+		<div class="card-deck">
+		  <div class="card card col-sm-12">
+			<a href="{% url 'talas' %}"><img class="card-img-top" src="https://too.kg/wp-content/uploads/22424230_1541876789192325_5978347128932495931_o-2.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Талас</h5>
+			  <p class="card-text">Талас облусу...</p>
+			</div>
+		  </div>
+		  <div class="card card col-sm-12">
+			<a href="{% url 'naryn' %}"><img class="card-img-top" src="https://asiamountains.net/assets/cache_image/assets/lib/resized/396/1600x1066_0x0_d0b.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Нарын</h5>
+			  <p class="card-text">Нарын облусу...</p>
+			</div>
+		  </div>
+		  <div class="card card col-sm-12">
+			<a href="{% url 'yssyk_kol' %}"><img class="card-img-top" src="https://vivid-travel.kz/assets/images/tours/issykul-novyj/mob3.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Ыссык-Көл</h5>
+			  <p class="card-text">Ыссык-Көл облусу...</p>
+			</div>
+		  </div>
+		  <div class="card card col-sm-12">
+			<a href="{% url 'chuy' %}"><img class="card-img-top" src="https://too.kg/wp-content/uploads/Burana-600x400.jpg" alt="Card image cap"></a>
+			<div class="card-body">
+			  <h5 class="card-title">Чүй</h5>
+			  <p class="card-text">Чүй облусу...</p>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<!-- Center -->
+</body>
+</html>
